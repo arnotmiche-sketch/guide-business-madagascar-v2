@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guide Business Madagascar</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- FontAwesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- SDK Start.io pour les publicités -->
+  <script type="text/javascript" src="https://app.start.io/sdk/start-sdk.js"></script>
+</head>
+<body>
+
+  <!-- Écran de Splash / Chargement initial -->
+  <div id="splash-screen">
+    <div class="splash-logo">🇲🇬</div>
+    <h1>Guide Business Madagascar</h1>
+    <p>Chargement des opportunités...</p>
+  </div>
+
+  <!-- Écran d'Authentification (Connexion / Inscription) -->
+  <div id="auth-screen" style="display: none;">
+    <div class="auth-card">
+      <div class="auth-logo">🇲🇬</div>
+      <h2 id="auth-title">Créer un compte</h2>
+      <p id="auth-subtitle">Rejoignez Guide Business Madagascar</p>
+      
+      <form id="auth-form">
+        <div id="register-fields">
+          <div class="input-group">
+            <label><i class="fa-solid fa-user"></i> Nom & Prénom</label>
+            <input type="text" id="reg-fullname" placeholder="Ex: Jean Rakoto">
+          </div>
+          <div class="input-group">
+            <label><i class="fa-solid fa-calendar"></i> Date de naissance</label>
+            <input type="text" id="reg-dob">
+          </div>
+          <div class="input-group">
+            <label><i class="fa-solid fa-house"></i> Domicile (Ville/Quartier)</label>
+            <input type="text" id="reg-address" placeholder="Ex: Antananarivo">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label><i class="fa-solid fa-at"></i> Nom d'utilisateur</label>
+          <input type="text" id="auth-username" placeholder="Choisissez un pseudo" required>
+        </div>
+
+        <div class="input-group">
+          <label><i class="fa-solid fa-lock"></i> Mot de passe</label>
+          <input type="password" id="auth-password" placeholder="Votre mot de passe" required>
+        </div>
+
+        <div class="input-group" id="confirm-password-group">
+          <label><i class="fa-solid fa-lock"></i> Confirmer le mot de passe</label>
+          <input type="password" id="auth-password-confirm" placeholder="Répétez le mot de passe">
+        </div>
+
+        <button type="submit" class="auth-btn" id="auth-submit-btn">S'inscrire</button>
+      </form>
+
+      <div class="auth-switch">
+        <span id="switch-text">Déjà un compte ?</span>
+        <button id="switch-mode-btn" type="button">Se connecter</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Conteneur Principal de l'Application -->
+  <div id="main-app-container" style="display: none;">
+    
+    <!-- Contenu dynamique -->
+    <main id="main-content" class="container">
+      <!-- Le contenu des pages s'affiche ici dynamiquement -->
+    </main>
+
+    <!-- Modal pour les guides étape par étape -->
+    <div id="modal-guide" class="modal" style="display: none;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modal-title">Guide</h3>
+          <button id="close-modal" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="modal-body" id="modal-steps-content">
+          <!-- Les étapes s'injectent ici -->
+        </div>
+        <div class="modal-footer">
+          <a id="modal-action-btn" href="#" target="_blank" class="modal-link-btn">
+            <i class="fa-solid fa-external-link-alt"></i> Ouvrir la plateforme
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Emplacement de votre bannière publicitaire Start.io -->
+    <div id="ad-banner-container" style="text-align: center; background: #111; padding: 5px 0;">
+      <div id="start-banner-ad"></div>
+    </div>
+
+    <!-- Barre de navigation du bas -->
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-page="home">
+        <i class="fa-solid fa-house"></i>
+        <span>Accueil</span>
+      </button>
+      <button class="nav-item" data-page="guides">
+        <i class="fa-solid fa-compass"></i>
+        <span>Guides</span>
+      </button>
+      <button class="nav-item" data-page="favorites">
+        <i class="fa-solid fa-star"></i>
+        <span>Favoris</span>
+      </button>
+      <!-- Onglet Message (Salon d'échange) -->
+      <button class="nav-item" data-page="messages">
+        <i class="fa-solid fa-comments"></i>
+        <span>Message</span>
+      </button>
+      <button class="nav-item" data-page="settings">
+        <i class="fa-solid fa-gear"></i>
+        <span>Paramètres</span>
+      </button>
+    </nav>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
