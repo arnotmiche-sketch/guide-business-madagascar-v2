@@ -1,9 +1,12 @@
 {
-  "name": "Guide Business Madagascar",
-  "short_name": "Guide Business",
-  "start_url": "./index.html",
-  "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#0f172a",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Guide Business Madagascar",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Guide Business",
+  "start_url": "/",
+  "theme_color": "#ffffff",
   "description": "Votre guide complet du business à Madagascar"
 }
